@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      height: 100%;
+      }
+      body, input, select { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      h1, h3 {
+      font-weight: 400;
+      }
+      h1 {
+      font-size: 32px;
+      }
+      h3 {
+      color: #1c87c9;
+      }
+      .main-block, .info {
+      display: flex;
+      flex-direction: column;
+      }
+      .main-block {
+      justify-content: center;
+      align-items: center;
+      width: 100%; 
+      min-height: 100%;
+      background: url("/uploads/media/default/0001/01/e7a97bd9b2d25886cc7b9115de83b6b28b73b90b.jpeg") no-repeat center;
+      background-size: cover;
+      }
+      form {
+      width: 80%; 
+      padding: 25px;
+      margin-bottom: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 20px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .metod {
+      display: flex; 
+      }
+      input[type=radio] {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+      text-indent: 32px;
+      cursor: pointer;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #1c87c9;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 4px;
+      top: 5px;
+      left: 5px;
+      border-bottom: 3px solid #1c87c9;
+      border-left: 3px solid #1c87c9;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      margin: 20px auto 0;
+      border: none;
+      border-radius: 5px; 
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #095484;
+      }
+      @media (min-width: 568px) {
+      .info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      }
+      input {
+      width: 46%;
+      }
+      input.fname {
+      width: 100%;
+      }
+      select {
+      width: 48%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    
+	<div class="main-block">
+	  <a href="" id="bmuli"><img  src="geo_flag.png" id="flag" width="100" style="margin: 30px;"></a>
+	  <!--                        src="usa_flag.png"></a> -->
+      <h1 style="color:green;"><span id="Order_Form">Order Form</span></h1>
+      <form action="/">
+	    <script>
+			//var Lang = "?Lang=EN";	
+			
+			document.getElementById("bmuli").href = "index.html?Lang=EN";
+			document.getElementById("flag").src = "geo_flag.png";
+			Lang = location.search;
+			console.log("Lang(location) = " + Lang);
+			
+			if( Lang.length == 0 || Lang == "?Lang=EN" ){
+			  console.log("Lang(1) = " + Lang);
+			  
+			  document.getElementById("bmuli").href = "index.html?Lang=GE";
+			  document.getElementById("flag").src = "usa_flag.png";
+			  
+			  
+			}
+			else
+			if( Lang ==  "?Lang=GE" ){
+			  console.log("Lang(2) = " + Lang);
+			  
+			  document.getElementById("bmuli").href = "index.html?Lang=EN";
+			  document.getElementById("flag").src = "geo_flag.png";
+			  
+			  
+			}			
+			
+			var Order_Form_EN = "შეკვეთის ფორმა";
+			var Order_Form_GE = "Order Form";
+			
+			var Full_name_EN = "Სრული სახელი";
+			var Full_name_GE = "Full name";
+			
+			var Email_EN = "ელ.ფოსტა";
+			var Email_GE = "Email";
+			
+			var Phone_number_EN = "ტელეფონის ნომერი";
+			var Phone_number_GE = "Phone number";
+			
+			var Today_date_EN = "დღევანდელი თარიღი";
+			var Today_date_GE = "Today date";
+			
+			var Order_due_date_EN = "შეკვეთის ვადა";
+			var Order_due_date_GE = "Order due date";
+			
+			var Date_of_event_EN = "ღონისძიების თარიღი";
+			var Date_of_event_GE = "Date of event";
+			
+			var Time_of_event_EN = "ღონისძიების დრო";
+			var Time_of_event_GE = "Time of event";
+			
+			var Event_location_EN = "ღონისძიების ადგილმდებარეობა";
+			var Event_location_GE = "Event location";
+			
+			var Type_of_event_EN = "ღონისძიების ტიპი";
+			var Type_of_event_GE = "Type of event";
+			
+			/*var Number_of_guests_EN = "Სტუმრების რაოდენობა";
+			var Number_of_guests_GE = "Number of guests";
+			
+			var Pick_up_time_EN = "შეკრების დრო";
+			var Pick_up_time_GE = "Pick up time";*/
+			
+			var Delivry_Metod_EN = "მიწოდების მეთოდი";
+			var Delivry_Metod_GE = "Delivry Metod";
+			
+			
+			var For_pick_up_EN = "მიკითხება";
+			var For_pick_up_GE = "For pick up";
+			
+			var For_delivery_EN = "Მიწოდებისთვის";
+			var For_delivery_GE = "For delivery";
+			
+			var Sbmt_EN = "გაგზავნა";
+			var Sbmt_GE = "Submit";
+		</script>
+        <div class="info">
+          <input class="fname" type="text" name="name" id="Full_name" placeholder="Full name">
+          <input type="text" name="name" id="Email" placeholder="Email">
+          <input type="text" name="name" id="Phone_number" placeholder="Phone number">
+          <input type="text" name="name" id="Today_date" placeholder="Today's date">
+          <input type="text" name="name" id="Order_due_date" placeholder="Order due date">
+          <input type="text" name="name" id="Date_of_event" placeholder="Date of event">
+          <input type="text" name="name" id="Time_of_event" placeholder="Time of event">
+          <input type="text" name="name" id="Event_location" placeholder="Event location">
+          <input type="text" name="name" id="Type_of_event" placeholder="Type of event">
+          <!--<select>
+            <option value="number" disabled selected><span id="Number_of_guests">Number of guests</span></option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+          </select>
+          <select>
+            <option value="time" disabled selected><span id="Pick_up_time">Pick up time</span></option>
+            <option value="8">8:00am</option>
+            <option value="9">9:00am</option>
+            <option value="10">10:00am</option>
+            <option value="12">12:00pm</option>
+            <option value="1">1:00pm</option>
+            <option value="3">3:00pm</option>
+            <option value="6">6:00pm</option>
+            <option value="7">7:00pm</option>
+          </select>-->
+        </div>
+        <h3><span id="Delivry_Metod">Delivry Metod</span></h3>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="none" id="radioOne" name="metod" checked/>
+            <label for="radioOne" class="radio"><span id="For_pick_up">For pick up</span></label>
+          </div>
+          <div>
+            <input type="radio" value="none" id="radioTwo" name="metod" />
+            <label for="radioTwo" class="radio"><span id="For_delivery">For delivery</span></label>
+          </div>
+        </div>
+        <button href="/" class="button"><span id="Sbmt">Submit</span></button>
+		<script>
+			if( Lang ==  "?Lang=GE"  ){
+			  document.getElementById("Order_Form").innerHTML = Order_Form_GE;
+			  document.getElementById("Full_name").placeholder = Full_name_GE;
+			  document.getElementById("Email").placeholder = Email_GE;
+			  document.getElementById("Phone_number").placeholder = Phone_number_GE;
+			  document.getElementById("Today_date").placeholder = Today_date_GE;
+			  document.getElementById("Order_due_date").placeholder = Order_due_date_GE;
+			  document.getElementById("Order_due_date").placeholder = Order_due_date_GE;
+			  document.getElementById("Date_of_event").placeholder = Date_of_event_GE;
+			  document.getElementById("Time_of_event").placeholder = Time_of_event_GE;
+			  document.getElementById("Event_location").placeholder = Event_location_GE;
+			  document.getElementById("Type_of_event").placeholder = Type_of_event_GE;
+			  ///document.getElementById("Number_of_guests").innerHTML = Number_of_guests_GE;
+			  ///Pick_up_time
+			  document.getElementById("Delivry_Metod").innerHTML = Delivry_Metod_GE;
+			  document.getElementById("For_pick_up").innerHTML = For_pick_up_GE;
+			  document.getElementById("For_delivery").innerHTML = For_delivery_GE;
+			  document.getElementById("Sbmt").innerHTML = Sbmt_GE;
+			}
+			else
+			if( Lang ==  "?Lang=EN" ){
+			  document.getElementById("Order_Form").innerHTML = Order_Form_EN;
+			  document.getElementById("Full_name").placeholder = Full_name_EN;
+			  document.getElementById("Email").placeholder = Email_EN;
+			  document.getElementById("Phone_number").placeholder = Phone_number_EN;
+			  document.getElementById("Today_date").placeholder = Today_date_EN;
+			  document.getElementById("Order_due_date").placeholder = Order_due_date_EN;
+			  document.getElementById("Order_due_date").placeholder = Order_due_date_EN;
+			  document.getElementById("Date_of_event").placeholder = Date_of_event_EN;
+			  document.getElementById("Time_of_event").placeholder = Time_of_event_EN;
+			  document.getElementById("Event_location").placeholder = Event_location_EN;
+			  document.getElementById("Type_of_event").placeholder = Type_of_event_EN;
+			  ///document.getElementById("Number_of_guests").innerHTML = Number_of_guests_EN;
+			  ///Pick_up_time
+			  document.getElementById("Delivry_Metod").innerHTML = Delivry_Metod_EN;
+			  document.getElementById("For_pick_up").innerHTML = For_pick_up_EN;
+			  document.getElementById("For_delivery").innerHTML = For_delivery_EN;
+			  document.getElementById("Sbmt").innerHTML = Sbmt_EN;
+			}
+		</script>
+      </form>
+    </div>
+  </body>
+</html>

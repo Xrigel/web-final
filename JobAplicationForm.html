@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JOB Aplication form</title>
+		<style>
+		*{
+		  box-sizing: border-box;
+		}
+		header{
+			height: 160px;
+			background-color: #80ffaa;
+			text-align: center;
+			padding-top: 40px;
+		}
+		
+		footer{
+		    height: 70px;
+			background-color: #80ffaa;
+			text-align: center;
+		}
+		/*nav{
+		  height: 50px;
+		}*/
+		section{
+		
+		}
+		span{
+			color: red;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>JOB Aplication form</h1>
+		</header>
+		<nav> </nav>
+		<section>
+			<article>
+			<form>
+				<label for="Name">სახელი <span >*</span></label><br>
+				<input type="text" name="Name" id="Name" placeholder="სახელი"><br>
+				<label for="surName">გვარი <span >*</span></label><br>
+				<input type="text" name="surName" id="surName" placeholder="გვარი"><br>
+				<label for="Email">ელ.ფოსტა <span>*</span></label><br>
+				<input type="email" name="Email" id="Email" placeholder="ელ.ფოსტა"><br>
+				<label for="phone">თელეფონი <span>*</span></label><br>
+				<input type="tel" name="phone" id="phone" placeholder="ტელეფონი" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"><br>
+				<label for="Job">მიმდინარე სამუშაო პოზიცია <span>*</span></label><br>
+				<select>
+					<option></option>
+					<option>Job 1</option>
+					<option>job 2</option>
+					<option>job 3</option>
+				</select><br>
+				<label for="StartDate">სამუშაოს დაწყების სასურველი თარიღი</label><br>
+				<input type="date" name="StartDate" id="StartDate"><br><br>
+				<label for="JobStatus">მიმდინარე სამუშაო სტატუსი</label><br>
+				<input type="radio" name="JobStatus" id="JobStatus">ვმუშაობ<br>
+				<input type="radio" name="JobStatus" id="JobStatus">თვით დასაქმებული<br>
+				<input type="radio" name="JobStatus" id="JobStatus">სამუშაოს მაძიებელი<br>
+				<input type="radio" name="JobStatus" id="JobStatus">სტუდენტი<br>
+				<label for="ListJobs">სამუშაო გამოცდილება</label><br>
+				<input type="radio" name="ListJobs" id="ListJobs">კი<br>
+				<input type="radio" name="ListJobs" id="ListJobs">არა<br>
+				</select>
+			</form>
+			</article>
+		</section>
+		<footer>ყველა ყფლება დაცულია &copy; 2023</footer>
+	</body>
+</html>
